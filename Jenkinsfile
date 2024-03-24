@@ -18,7 +18,7 @@ pipeline {
     
         stage('Build') {
             steps {
-                dir('LocatorTest') {
+                dir('LocatorProject/LocatorTest') {
                     bat 'mvn test'
                 }
             }
