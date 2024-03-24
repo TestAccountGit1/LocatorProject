@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir('LocatorProject/LocatorTest') {
+                dir('LocatorTest/pom.xml) {
                     bat 'mvn clean install'
                 }
             }
