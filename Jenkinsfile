@@ -9,13 +9,13 @@ pipeline {
             }
             
         }
-        
-        
-        stage('Checkout') {
+        stage("clone Repo") {
             steps {
-                git branch: 'master', url: 'https://github.com/TestAccountGit1/LocatorProject.git'
+                bat "git clone https://github.com/TestAccountGit1/LocatorProject.git"
             }
         }
+        
+    
         stage('Build') {
             steps {
                 dir('LocatorTest/pom.xml') {
@@ -23,5 +23,12 @@ pipeline {
                 }
             }
         }
+
+        
     }
 }
+
+
+        
+        
+    
