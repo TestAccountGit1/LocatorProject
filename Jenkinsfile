@@ -18,8 +18,8 @@ pipeline {
     
         stage('Build') {
             steps {
-                dir('LocatorProject/LocatorTest') {
-                    bat 'mvn clean install'
+                dir('LocatorTest') {
+                    bat 'mvn test'
                 }
             }
         }
