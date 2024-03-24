@@ -9,8 +9,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                  dir('LocatorProject') {
-                bat 'mvn clean install'
+                dir('LocatorProject') {
+                    bat 'mvn clean install'
+                }
             }
         }
     }
